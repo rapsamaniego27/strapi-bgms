@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scorefields",
+  "info": {
+    "singularName": "scorefield",
+    "pluralName": "scorefields",
+    "displayName": "Scorefield"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "boardgame": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::boardgame.boardgame",
+      "inversedBy": "scorefields"
+    },
+    "field_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Static",
+        "Subtractive",
+        "Cumulative",
+        "Bonus",
+        "Total",
+        "None"
+      ]
+    }
+  }
+}

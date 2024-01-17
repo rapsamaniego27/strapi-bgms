@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_list_scoresheets",
+  "info": {
+    "displayName": "Scoresheet",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "total_points": {
+      "type": "float"
+    },
+    "row": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.scorepoint"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

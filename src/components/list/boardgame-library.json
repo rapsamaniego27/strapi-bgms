@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_list_boardgame_libraries",
+  "info": {
+    "displayName": "Boardgame Library",
+    "icon": "puzzle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "boardgame": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::boardgame.boardgame"
+    },
+    "is_favorite": {
+      "type": "boolean",
+      "default": false
+    },
+    "date_purchased": {
+      "type": "date"
+    }
+  }
+}

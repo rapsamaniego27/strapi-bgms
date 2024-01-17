@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boardgames",
+  "info": {
+    "singularName": "boardgame",
+    "pluralName": "boardgames",
+    "displayName": "Boardgame",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Strategy",
+        "Party",
+        "Casual"
+      ]
+    },
+    "segmentation": {
+      "type": "enumeration",
+      "enum": [
+        "Individual",
+        "One to Many",
+        "Cooperative",
+        "Teams"
+      ]
+    },
+    "min_players": {
+      "type": "integer"
+    },
+    "max_players": {
+      "type": "integer"
+    },
+    "difficulty": {
+      "type": "decimal",
+      "min": 1,
+      "max": 5
+    },
+    "bgg_link": {
+      "type": "text"
+    },
+    "scorefields": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::scorefield.scorefield",
+      "mappedBy": "boardgame"
+    }
+  }
+}

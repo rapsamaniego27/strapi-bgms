@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scoresheets",
+  "info": {
+    "singularName": "scoresheet",
+    "pluralName": "scoresheets",
+    "displayName": "Scoresheet Structure",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "boardgame": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::boardgame.boardgame"
+    },
+    "scorerow": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.scorepoint"
+    }
+  }
+}

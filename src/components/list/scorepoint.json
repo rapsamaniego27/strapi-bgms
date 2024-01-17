@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_list_scorepoints",
+  "info": {
+    "displayName": "Scorepoint",
+    "icon": "chartCircle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "scorefield": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::scorefield.scorefield"
+    },
+    "point": {
+      "type": "float"
+    }
+  }
+}
